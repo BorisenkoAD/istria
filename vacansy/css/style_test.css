@@ -1,0 +1,153 @@
+		#wrapper {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background: #EFEFEF;
+			width: 1024px;
+			margin: 0 auto;
+			border: 1px solid #E8E8E8;
+			padding: 1em;
+			  box-shadow:
+			   0 1px 4px rgba(0, 0, 0, .3),
+			   -23px 0 20px -23px rgba(0, 0, 0, .8),
+			   23px 0 20px -23px rgba(0, 0, 0, .8),
+			   0 0 40px rgba(0, 0, 0, .1) inset;
+		}
+		
+		div {
+			display: block;
+		}
+		
+		a {
+			border-bottom-color: #007EFC;
+			color: #007EFC;
+			text-decoration: underline;
+			cursor: auto;
+		}
+		
+		body, html {	
+			margin: 0;
+			padding: 0;
+			font-family: Verdana, Helvetica, sans-serif;
+			color: #000;
+			font-size: 13px;
+			line-height: 1.5;
+			background-color: #009688;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-attachment: fixed;	
+/*  			height: 100%;  */
+			}
+						
+		.image_action, .image_del, .image_new, .image_edit, .image_post, .image_unpost {
+			display: inline-block;
+		}
+		.image_del:hover, .image_new:hover, .image_edit:hover, .image_post:hover, .image_unpost:hover {
+			width: 94px;
+			height: 94px; 
+			border: 1px dashed #d9d9d9;	
+		}
+		
+		#VacancyView_sidebar {
+			padding-top: 15px;
+			float:right;
+			width: 300px;
+		}
+		
+		#VacancyView_main {
+			padding-right: 400px; 
+		}
+		.VacancyDetails_title {
+			font-size: 13px;
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+		.VacancyDetails_item {
+			margin: 0 0 7px;
+		}
+		.VacancyView_salary {
+			margin-bottom: 24px;
+		}		
+		.vacansy_name{
+		    color: #08C;
+			font-weight: bold;
+			margin-bottom: 6px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.vacansy_exp{
+			border-bottom-color: #919191;
+			color: #919191;
+		}
+		
+		.vacansy_name{
+		    color: #08C;
+			font-weight: bold;
+			margin-bottom: 6px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.vacansy_exp{
+			border-bottom-color: #919191;
+			color: #919191;
+		}
+		
+		.vacansy_block {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background: #EFEFEF;
+		}
+		
+		.vacansy_box {
+		    padding-right: 20px;
+			width: 30%;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 20px;
+		}
+		
+		.vacansy_box_red {
+			border: 1px double red;
+		}
+		.vacansy_box_black {
+			border: 1px double black;
+		}
+		
+		.vacansy_name{
+		    color: #08C;
+			font-weight: bold;
+			margin-bottom: 6px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.vacansy_exp{
+			border-bottom-color: #919191;
+			color: #919191;
+		}
+		
+		.vacansy_box {
+		    padding-right: 20px;
+			width: 30%;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 20px;
+		}
+		
+		.vacansy_name{
+		    color: #08C;
+			font-weight: bold;
+			margin-bottom: 6px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.vacansy_exp{
+			border-bottom-color: #919191;
+			color: #919191;
+		}
+		.vacansy_salary {
+		border-bottom-color: #093;
+		color: #093;
+		}

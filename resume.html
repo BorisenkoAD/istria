@@ -1,0 +1,411 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>АНКЕТА С САЙТА</title>
+	<style type="text/css">
+		#wrapper {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background: #EFEFEF;
+			width: 1024px;
+			margin: 0 auto;
+			border: 1px solid #E8E8E8;
+			padding: 1em;
+			  box-shadow:
+			   0 1px 4px rgba(0, 0, 0, .3),
+			   -23px 0 20px -23px rgba(0, 0, 0, .8),
+			   23px 0 20px -23px rgba(0, 0, 0, .8),
+			   0 0 40px rgba(0, 0, 0, .1) inset;
+		}
+			
+		body {	
+			margin: 0;
+			padding: 0;
+			font-family: Verdana, Helvetica, sans-serif;
+			color: #000;
+			font-size: 13px;
+			line-height: 1.5;
+			background-color: #009688;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-attachment: fixed;
+			
+			}
+
+		#position {
+		width: 198px; 
+		height: 36px; 
+		float: left; 
+		padding-left: 30px; 
+		margin-left: 50px;
+		font-size: 25px; 
+		text-transform: uppercase; /* Заглавные буквы */
+		color: #FFF;
+		display: block;
+		background: rgba(0, 0, 0, 0.7);
+		}
+		
+		#salary_desired{
+		width: 198px; 
+		height: 36px; 
+		padding-left: 26px;
+		margin-left: 278px;
+		font-size: 25px; 
+		text-transform: uppercase; /* Заглавные буквы */
+		color: #FFF;
+		display: block;
+		background: rgba(0, 0, 0, 0.7);
+		}
+		 .general_info ul{
+		 margin: 0;
+		 padding: 0;
+		 list-style: none;
+		 width: 700px; 
+		 float: left;
+		 margin-top: 15px;
+		 margin-left: 30px;
+		 display: block;
+		 }
+		 
+		 .edu_info ul {
+		 margin: 0;
+		 padding: 0;
+		 list-style: none;
+		width: 800px; 
+		float: left;
+		margin-top: 15px;
+		 margin-left: 30px;
+		 display: block;
+		 }
+		 
+		 .edu_info ul li{
+		 width: 300px;
+		 float: left;
+		 display: block;
+		 }
+		 .prof_activity ul{
+		 margin: 0;
+		 padding: 0;
+		 list-style: none;
+		width: 800px; 
+		float: left;
+		margin-top: 15px;
+		 margin-left: 30px;
+		 display: block;
+		 }
+		 
+		 .prof_activity ul li {
+		 width: 300px;
+		 float: left;
+		 display: block;
+		 }
+		 
+		 .general_info ul li{
+		 width: 300px;
+		 float: left;
+		 display: block;
+		 }
+		 
+		 .li_otstup {
+		  padding-left: 50px;
+		  width: 150px !important;
+		 color: #FFF;
+		  background: rgba(0, 0, 0, 0.7);
+		 }
+		 
+		 .li_otstup_edu{
+		  padding-left: 50px;
+		  width: 450px !important;
+		 color: #FFF;
+		  background: rgba(0, 0, 0, 0.7);
+		 }
+		 .textarea{
+		  padding-left: 50px;
+		  width: 450px !important;
+		  color: #FFF;
+		  background: rgba(0, 0, 0, 0.7);
+		  text-align: justify;
+		 }
+		 
+		 
+		 #kontact_info{	 border-top: 1px solid #E8E8E8;	 border-bottom: 1px solid #E8E8E8;	 margin-bottom: 5px; margin-top: 5px; }
+		 #prof_activity {	 border-top: 1px solid #E8E8E8;	 border-bottom: 1px solid #E8E8E8;	 margin-bottom: 5px;	 margin-top: 5px; }
+		 
+		 #lfm {
+		 margin-top: 15px;
+		 margin-left: 30px;
+		 margin-right: 300px;
+		 text-transform: uppercase; /* Заглавные буквы */
+		 font-size: 25px;
+		 color: #FFF;
+		 display: block;
+		 background: rgba(0, 0, 0, 0.7);
+		 }
+		 
+		 #phone_num, #Email, #birthday, #place_liv, #citizenship{
+		margin-top: 5px;
+		margin-left: 30px;
+		 }
+	</style>
+ </head> 
+ 
+ 
+<body>
+<div id="wrapper">
+	<div id="position"><?php $position?>ДОЛЖНОСТЬ
+	</div><!--position-->
+	<div id="salary_desired"><?php $salary_desired?>ЗАРПЛАТА
+	</div><!--salary_desired-->
+<div style="clear: both;"></div>
+	<div class="general_info">
+		<ul>
+			<li>Пожелания по графику работы:</li>
+			<li class="li_otstup"> ГРАФИК РАБОТЫ<?php $schedule?></li>
+		</ul>
+	</div><!--general_info#1-->
+	<div class="general_info">
+		<ul>
+			<li>Когда готовы приступить к работе:</li>
+			<li class="li_otstup"> ДАТА НАЧАЛА<?php $date_get_start?></li>
+		</ul>
+	</div><!--general_info#2-->
+	<div class="general_info">
+		<ul>
+			<li>Возможность ездить в командировки:</li>
+			<li class="li_otstup"> ВОЗМОЖНОСТЬ<?php $travel?></li>
+		</ul>
+	</div><!--general_info#3-->
+<div style="clear: both;"></div>
+	<div id="kontact_info">
+		<div id="lfm">
+			Петров<?php $lastname?> Алексей<?php $firstname?> Никонорович<?php $middlename?>
+		</div>
+		<div id="phone_num">
+			+7(921)3334477<?php $telephone?>
+		</div>
+		<div id="Email">
+			petrov@home.ru<?php $email?>
+		</div>
+			<div id="birthday">
+			20.12.1970<?php $birthday?>
+		</div>
+		<div id="place_liv">
+			Санкт-Петербург, пр. Косыгина д.1<?php $place_liv?>
+		</div>
+		<div id="citizenship">
+			Русский<?php $citizenship?>
+		</div>
+	</div>
+
+	<div id="edu">
+	<h3>Основное образование:</h3>
+		<div class="edu_info">
+			<ul>
+				<li>Учебное заведение</li>
+				<li class="li_otstup_edu">Институт 1<?php  $Institute?></li>
+			</ul>
+		</div>	
+		<div class="edu_info">
+			<ul>
+				<li>Год окончания</li>		
+				<li class="li_otstup_edu">2001<?php $_Grad_year?></li>
+			</ul>
+		</div>	
+		<div class="edu_info">
+			<ul>
+				<li>Специальность</li>
+				<li class="li_otstup_edu">Инженер<?php $speciality?></li>
+			</ul>
+		</div>
+		<div class="edu_info">
+			<ul>
+				<li>Вид диплома, степень</li>
+				<li class="li_otstup_edu">Магистр<?php $diplom?></li>
+			</ul>
+		</div>	
+	</div><!--edu-->
+<div style="clear: both;"></div>
+	<div id="edu_additional">
+	<h4>Дополнительное образование:</h4>
+		<div class="edu_info">
+			<ul>
+				<li>Учебное заведение</li>
+				<li class="li_otstup_edu">Институт 2<?php  $Institute_2?></li>
+			</ul>
+		</div>	
+		<div class="edu_info">
+			<ul>
+				<li>Год окончания</li>		
+				<li class="li_otstup_edu">2009<?php $Grad_year_2?></li>
+			</ul>
+		</div>	
+		<div class="edu_info">
+			<ul>
+				<li>Специальность</li>
+				<li class="li_otstup_edu">Бухучет и аудит<?php $speciality_2?></li>
+			</ul>
+		</div>
+		<div class="edu_info">
+			<ul>
+				<li>Вид диплома, степень</li>
+				<li class="li_otstup_edu">Сертификат<?php $diplom_2?></li>
+			</ul>
+		</div>	
+	</div><!--edu_additional-->
+<div style="clear: both;"></div>
+	
+	<div id="prof_activity">
+	<h3>Профессиональная деятельность:</h3>
+		
+		<div class="prof_activity">
+			<ul>
+				<li>Наименование организации</li>
+				<li class="li_otstup">Рога и Копыта, ООО<?php $Company_name?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Начало работы</li>
+				<li class="li_otstup">февраль, 2010<?php $start_job?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Окончание работы</li>
+				<li class="li_otstup">март, 2013<?php $end_job?></li>
+			</ul>
+		</div>
+		
+		<div class="prof_activity">
+			<ul>
+				<li>Должность</li>
+				<li class="li_otstup">О. Бендер<?php $post?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Обязанности</li>
+				<li class="textarea">
+				Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где апогей отражает спектральный класс. Реликтовый ледник, как бы это ни казалось парадоксальным, слабопроницаем. Каллисто неравномерен. Юлианская дата возможна. Огpомная пылевая кома пространственно вращает космический эксцентриситет. Афелий разрушаем.
+				<?php $responsibilities?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Навыки</li>
+				<li class="textarea">
+				Исходя из астатической системы координат Булгакова, динамическое уравнение Эйлера вращает собственный кинетический момент. Гироскоп горизонтально участвует в погрешности определения курса меньше, чем жидкий ПИГ. 
+				<?php $skills?></li>
+			</ul>
+		</div>
+	</div><!--prof_activity-->
+	
+<div style="clear: both;"></div>
+	<div id="prof_activity_2">
+	<h4>Профессиональная деятельность 2:</h4>
+		
+		<div class="prof_activity">
+			<ul>
+				<li>Наименование организации</li>
+				<li class="li_otstup">кометы Галлилея, ООО<?php $Company_name_2?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Начало работы</li>
+				<li class="li_otstup">февраль, 2011<?php $start_job_2?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Окончание работы</li>
+				<li class="li_otstup">март, 2014<?php $end_job_2?></li>
+			</ul>
+		</div>
+		
+		<div class="prof_activity">
+			<ul>
+				<li>Должность</li>
+				<li class="li_otstup">Астроном<?php $post_2?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Обязанности</li>
+				<li class="textarea">
+				Газопылевое облако случайно. Угловое расстояние, по определению, вращает первоначальный часовой угол. Зенитное часовое число гасит вращательный сарос. Поперечник, как бы это ни казалось парадоксальным, отражает эксцентриситет. Гелиоцентрическое расстояние, в первом приближении, ищет параллакс. Красноватая звездочка, в первом приближении, иллюстрирует возмущающий фактор.
+				<?php $responsibilities_2?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Навыки</li>
+				<li class="textarea">
+				Фаза иллюстрирует эксцентриситет. Уравнение времени ищет сарос. Угловое расстояние колеблет радиант. Астероид оценивает зенит.
+				<?php $skills_2?></li>
+			</ul>
+		</div>
+		</div><!--prof_activity_2-->
+<div style="clear: both;"></div>
+		<div id="prof_activity_3">
+	<h4>Профессиональная деятельность 3:</h4>	
+		
+		<div class="prof_activity">
+			<ul>
+				<li>Наименование организации</li>
+				<li class="li_otstup">NONE<?php $Company_name_3?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Начало работы</li>
+				<li class="li_otstup">NONE<?php $start_job_3?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Окончание работы</li>
+				<li class="li_otstup">NONE<?php $_end_job_3?></li>
+			</ul>
+		</div>
+		
+		<div class="prof_activity">
+			<ul>
+				<li>Должность</li>
+				<li class="li_otstup">NONE<?php $post_3?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Обязанности</li>
+				<li class="textarea">
+				NONE
+				<?php $responsibilities_3?></li>
+			</ul>
+		</div>
+
+		<div class="prof_activity">
+			<ul>
+				<li>Навыки</li>
+				<li class="textarea">
+				NONE
+				<?php $skills_3?></li>
+			</ul>
+		</div>
+	
+	</div><!--prof_activity_3-->
+<div style="clear: both;"></div>
+</div><!--wrapper-->
+</body>

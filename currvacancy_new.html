@@ -1,0 +1,145 @@
+<?php
+include "dbLib.php";
+include "funcLib.php";
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/form.css" />
+	<title>Вакансии</title>
+
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="top_line"></div> <!--top_line-->
+			<div id="logo">
+				<a name="top"></a><a href="/"><img src="img/logo.jpg" alt="logo" /></a>
+			</div><!--logo-->					
+			<nav>
+				<ul>
+					<li><a href="/">КОМПАНИЯ</a>
+						<ul>
+							<li><a href="index.html#princip">Принципы</a></li>
+							<li><a href="index.html#partner">Партнеры</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="our_project.html">ПРОЕКТЫ</a>
+						<ul>
+							<li><a href="our_project.html#project">Проекты</a></li>
+							<li><a href="our_project.html#algoritm">Алгоритм</a></li>
+						</ul>
+					</li>
+					<li><a href="our_team.html">КОМАНДА</a>
+						<ul>
+							<li><a href="our_team.html#team">Команда</a></li>
+							<li><a href="our_team.html#party">Мероприятия</a></li>
+							<li><a href="our_team.html#answer">Отзывы</a></li>
+						</ul>
+					</li>
+					<li><a href="vacancy.html">ВАКАНСИИ</a>
+						<ul>
+							<li><a href="vacancy.html#perspeck">Перспективы</a></li>
+							<li><a href="vacancy.html#sovet">Советы</a></li>
+							<li><a href="vacancy.html#vacancy">Вакансии</a></li>			
+						</ul>
+					</li>
+					<li><a href="contact.html">КОНТАКТЫ</a></li>
+				</ul>
+			</nav><!--nav-->	
+		</header><!--header-->	
+		<div id="path">
+<?
+$id = $_GET['id'];
+$stmt = $connection->prepare('UPDATE vacansy SET count = count + 1 WHERE id = ?');
+$stmt->bindValue(1, $id, PDO::PARAM_INT);
+$stmt->execute();
+	$stmt = $connection->prepare('SELECT * FROM vacansy 
+JOIN s_hr_dept ON (vacansy.id_dept = s_hr_dept.id)
+JOIN s_edu ON (vacansy.id_edu = s_edu.id)
+JOIN s_exp ON (vacansy.id_exp = s_exp.id)
+WHERE vacansy.ID =?');
+	$stmt->bindValue(1, $id, PDO::PARAM_INT);
+	$stmt->execute();
+	while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+{?>
+		<h3>
+			<a href="/"><span class="vacansy_hyperlink">Главная</span></a> / <a href="vacancy.html"><span class="vacansy_hyperlink">Вакансии</span></a> / <?php echo $row["name"] ?>
+		</h3>
+		</div><!--path-->
+		<div id="content">	
+		
+
+<div style="clear: both;"></div>			
+			<div id="vacancy">	
+<div class="top_line_content"></div> <!--top_line_content-->
+				<div class="logo_button">	
+					<img src="img/logo_button.jpg" alt="button logo" />
+				</div><!--logo_button-->
+				<div class="blue_line"><div class="vacansy_name">
+					<h2><?php echo $row["name"] ?></h2>
+				</div><!--blue_line--></div>
+<div id="VacancyView_sidebar">
+
+	<div class="VacancySendResumeButton">
+	
+		<a href="anketa.html?id=<? echo $row["ID"]?>" class="sj_btn m_green VacancySendResumeButton_btn">Заполнить анкету</a>
+	</div><!--VacancySendResumeButton-->		
+		<div class="data_post_for_visitors">		
+			<b>Вакансия опубликована: </b><?php echo $row["data_post"]?>
+		</div><!--data_post_for_visitors-->	
+</div><!--VacancyView_sidebar-->
+<!-- <div style="clear: both;"></div> -->
+<div id="VacancyView_main">
+<!-- 		<div class="vacansy_name">
+			<h4><?php echo $row["name"] ?></h4>
+		</div><!--vacansy_name-->
+		<div class="VacancyView_salary">
+			<span class="vacansy_salary">
+				<b>
+				<nobr>от&nbsp;<?php echo $row["zarplata_ot"] ?>&nbsp;до&nbsp;<?php echo $row["zarplata_do"] ?>&nbsp;руб.</nobr>
+				</b>
+			</span>
+			<span><b><nobr>Опыт работы:&nbsp;<?php echo $row["title"] ?>, </nobr></b></span>
+			<span><b><nobr>Образование:&nbsp;<?php echo $row["edu_name"] ?>.</nobr></b></span>
+		</div><!--VacancyView_salary-->	
+		<div class="VacancyDetails_section">
+			<div class="VacancyDetails_title">Должностные обязанности:</div><!--VacancyDetails_title-->
+			<div class="VacancyDetails_item">
+			<?php echo $row["obyazannosti"] ?>
+			</div><!--VacancyDetails_item-->
+			<div class="VacancyDetails_title">Требования:</div><!--VacancyDetails_title-->
+			<div class="VacancyDetails_item">
+			<?php echo $row["trebovaniya"] ?>
+			</div><!--VacancyDetails_item-->
+			<div class="VacancyDetails_title">Условия:</div><!--VacancyDetails_title-->
+			<div class="VacancyDetails_item">
+			<?php echo $row["usloviya"] ?>
+			</div><!--VacancyDetails_item-->
+		</div><!--VacancyDetails_section-->
+</div><!--VacancyView_main-->
+<div style="clear: both;"></div>
+<?}
+?>		</div><!--vacancy-->	
+		</div><!--content-->
+		<footer>
+		<div id="up">
+			<a href="#top"><img src="img/up.png" alt="UP!"/></a>
+		</div><!--up -->		
+			<div id="footer_navigation">	
+				<ul>
+					<li><a href="i/">ГЛАВНАЯ</a></li>
+					<li><a href="our_project.html">НАШИ ПРОЕКТЫ</a></li>
+					<li><a href="our_team.html">НАША КОМАНДА</a></li>
+					<li><a href="vacancy.html">ВАКАНСИИ</a></li>
+					<li><a href="contact.html">КОНТАКТЫ</a></li>				
+				</ul>
+			</div><!--footer_navigation-->	
+		</footer> <!--footer -->
+	</div><!--end wrapper-->
+</body>
+</html>

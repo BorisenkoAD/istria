@@ -1,0 +1,733 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre, h1, h2, h3, h4, h5, h6,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+}
+ol, ul {
+	list-style: disc;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+position: relative;
+z-index: 25;
+}
+
+body {	
+	font-family: Verdana, Helvetica, sans-serif;
+	color: ##515151;
+	font-size: 13px;
+	line-height: 1.5;
+ 	background-image: url(../img/bg.jpg); 
+
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	
+}
+
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #515151;
+	font-size: 14px;
+}
+
+
+#wrapper {
+	background: #FFFFFF;
+	width: 1024px;
+	margin: 0 auto;
+				margin-top: 20px;
+				border: 1px solid #E8E8E8;
+			padding: 1em;
+			  box-shadow:
+			   0 1px 4px rgba(0, 0, 0, .3),
+			   -23px 0 20px -23px rgba(0, 0, 0, .8),
+			   23px 0 20px -23px rgba(0, 0, 0, .8),
+			   0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+#content {
+}
+
+#team, #party, #company, #project, #algoritm, #perspect, #sovet, #vacancy, #anketa, #princip, #reviews, #partner, #feedback, #contact, footer{	
+	padding-top: 15px;
+}
+
+.slogan_on_slides {
+	font-size: 25px;
+}
+
+#top_line {
+	background: #5a5a5a;
+	width: 1024px;
+	height: 5px;
+}
+
+.top_line_content {
+	background: #5a5a5a;
+	width: 864px;
+	height: 5px;
+	margin-left: 80px;
+}
+#logo {
+	width: 129px;
+	height: 59px;
+	display: block;
+	float: left;
+	margin-left: 90px;
+}
+.logo_button {
+	width: 26px;
+	height: 26px;
+	display: block;
+	float: left;
+	margin-left: 80px;
+}
+
+.blue_line {
+	background: #32b2d6;
+	width: 864px;
+	height: 26px;
+	margin-left: 80px;
+}
+
+.blue_line h2 {
+	color: #FFFFFF;
+	line-height: 25px;
+	padding-left: 60px;
+	text-shadow: 0 1px 1px #000;
+}
+
+nav {
+	background: #32b2d6;
+ 	padding: 0;
+	margin: 0;
+	width: 1024px;
+	height: 45px;
+	font: bold 14px Verdana, Helvetica, sans-serif;
+	
+	color: #5a5a5a;	
+	}
+
+nav li {
+	list-style: none;
+	float: left;
+	height: 33px;
+	padding: 0;
+	margin: 0;
+	width: 150px;
+	text-align: center;
+	background: #32b2d6;
+	position: relative;
+	padding-top: 12px;
+
+	}
+nav li ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 150px;
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 45px;
+	}
+nav li ul li {
+	float: none;
+	height: 33px;
+	margin: 0;
+	width: 150px;
+	text-align: center;
+	background: #7F7F7F;
+	}
+nav li a {
+	display: block;
+	color: #FFF;
+	width: 150px;
+	height: 33px;
+	text-decoration: none;
+	
+	}
+nav li:hover ul, nav li.jshover ul {
+	display: block;
+	text-shadow: 0 1px 1px #000;
+	}
+nav li:hover, nav li.jshover {
+	background: #5a5a5a;
+	text-shadow: 0 1px 1px #000;
+	}
+
+
+.image {
+	margin-top: 10px;
+	margin-left: 80px;
+	float: left;
+	display: block;
+}
+
+.image_our_project{
+    margin-top: 37px;
+    margin-left: 105px;
+	float: left;
+	display: block;
+}
+
+.image_algoritm {
+    margin-top: 40px;
+    margin-left: 85px;
+	float: left;
+	display: block;
+}
+
+.image_perspective {
+	margin-top: 50px;
+	margin-left: 80px;
+	float: left;
+	display: block;
+}
+
+.vacan .image_vacancy{
+	display: block;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 80px;
+	float: left;
+	display: block;
+}
+.vacan .text_vacansii ul {
+ 	padding-left: 15px;
+    list-style-type: disc;
+}
+.vacan .text_vacansii h4 {
+    font-size: 13px; 
+	font-weight: bold;
+}
+
+.vacan .text_vacansii h5 { 
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+.vacan .image_vacancy .vacan_text {
+	position: absolute;
+	color: white;
+	font: bold 24px/45px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+	background: rgb(0, 0, 0); /* на случай, если следующая строка не сработает */
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	bottom: 167px;
+}
+.vacan .image_vacancy .vacan_zp {
+	position: absolute;
+	color: red;
+	font: bold 24px/45px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+	background: rgb(0, 0, 0); /* на случай, если следующая строка не сработает */
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	bottom: 27px;
+}
+
+
+#team p {
+	margin-left: 460px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+#party p {
+	margin-left: 460px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+#company p {
+	margin-left: 451px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+#company ul {
+	padding-left: 451px;
+	padding-right: 80px;
+	padding-top: 11px; 	
+	list-style-position: outside;
+	text-align: justify;	
+}
+
+
+#company .wrap {
+	margin-left: 80px; 
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+#project p {
+	margin-left: 451px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+#project .twoParagraf{
+	margin-left: 80px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+}
+#perspect p {
+	margin-left: 490px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+
+.Head_1{ /*Если в тексте пользоваться тегами h3 то всю съезжает некрасиво. А так span и все пучком*/
+	font: bold 14px Verdana, Helvetica, sans-serif;
+	
+}
+#perspect ul {
+	padding-left: 490px;
+	padding-right: 80px;
+	padding-top: 11px; 	
+	list-style-position: outside;
+	text-align: justify;
+}
+
+#sovet p {
+	padding-left: 80px;
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+#sovet ul {
+	padding-left: 120px;
+	padding-right: 80px;
+	padding-top: 11px; 	
+	list-style-position: outside;
+	text-align: justify;
+}
+
+#vacancy p {
+	margin-left: 460px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+#vacancy .vacan {
+	float: left;
+	width: 400px;
+	margin-left: 80px;
+	margin-top: 15px;
+
+}
+
+#vacancy .vacan p {
+	margin-left: 10px;
+	margin-top: 9px;
+	margin-right: 80px;
+	font: 11px;
+	line-height: 1;
+	text-indent: 0px; /* Отступ первой строки в пикселах */	
+}
+
+.vacan_form {
+    margin-top: 10px;
+    width: 800px;
+    color: #999;
+    padding-top: 15px;
+} 
+
+#vacancy .vacan ul li{
+}
+
+.text {
+	margin-left: 350px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.5;
+	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+#contact p {
+	margin-left: 427px; /*отступаем от левого края + 10 от ее края. А картинки то все разные(*/
+	margin-top: 9px;
+	margin-right: 80px;
+	line-height: 1.5;
+} 
+
+#algoritm .ul_1{
+	list-style-type: decimal;
+	padding-left: 376px;
+	padding-right: 80px;
+	padding-top: 11px; 	
+}
+
+#algoritm .ul_2{
+	list-style-type: disc;
+	padding-left: 25px;
+	padding-right: 80px;
+	padding-top: 11px; 	
+}
+
+#algoritm .ul_3{
+	list-style-type: disc;
+	padding-left: 25px;
+	padding-right: 80px;
+	padding-top: 11px; 	
+}
+
+.image_right {
+	margin-top: 25px;
+	margin-right: 80px;
+	float: right;
+}
+
+#princip ul{
+    padding-left: 100px;
+    padding-top: 10px;
+    float: left;
+    list-style-type: disc;
+}
+.list_partner ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 125px;
+	padding-top: 11px; 
+	overflow: hidden;
+	list-style: none;
+
+}
+
+.list_partner ul li {
+	margin-right: 18px;
+	float: left;
+	display: block;
+	
+}
+
+#footer_navigation {
+	background: #5a5a5a;
+	width: 1024px;
+	height: 40px;
+}
+#footer_navigation ul {
+	margin-left: 500px;
+	padding-top: 11px; 
+	overflow: hidden;
+	list-style: none;
+}
+
+#footer_navigation ul li {
+	float: left;
+	color: #ffffff;
+	margin-right: 10px;
+}
+
+#footer_navigation ul li a{
+	color: #ffffff;	
+	font: 10px Arial, Helvetica, sans-serif;
+	text-decoration: none;	
+}
+
+#up {
+	width: 37px;
+	height: 38px;
+	display: block;
+	margin-right: 5px;
+	margin-top: -10px;
+	float: right;
+}
+
+#path {
+	border-bottom: 6px solid #f3f3f3;
+    border-top: 6px solid #f3f3f3;
+	margin-top: 20px; 
+	background: #f8f8f8;
+	width: 1024px;
+	height: 80px;
+	}
+
+#path h3 {
+	color: #555;
+	padding: 25px;
+}
+
+.reviews {
+	background: #f8f8f8;
+	margin-left: 130px;
+	margin-top: 10px;
+	margin-right: 80px;
+	height: 100px;
+}
+.reviews p {
+    padding: 25px;
+    margin-left: 19px;
+    padding-top: 0px;
+    text-align: justify;
+    text-indent: 25px;
+}
+
+#review_img {
+	float: left;
+	margin-left: -25px;
+	margin-top: 25px;	
+}
+
+#map {
+	width: 604px;
+	height: 451px;
+	display: block;
+	margin: 0 auto;
+}
+
+#text {
+	margin-left: 80px;
+	margin-top: 10px;
+}
+
+ .hovergallery ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+ .hovergallery li img {
+  float: left;
+  width: 222px;
+  display: block;
+  margin-left: 93px;
+  margin-top: 15px;
+}
+
+.hovergallery li a img{
+	 opacity:0.3; -moz-opacity:0.3;
+	filter:alpha(opacity=40);
+}
+
+.hovergallery li a:hover img{
+	opacity:1.0; -moz-opacity:1.0;
+	filter:alpha(opacity=100);
+}
+
+
+
+.del { display: none; }
+.del:not(:checked) + label + * { display: none; } /* фактически нужна только одна строка */
+
+/* вид CSS кнопки */
+.del:not(:checked) + label,
+.del:checked + label {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 2px;
+  color: #fff;
+  background: #32b2d6;
+  cursor: pointer;
+}
+.del:checked + label {
+  background: #5a5a5a;
+}
+
+		.image_action, .image_del, .image_new, .image_edit, .image_post, .image_unpost {
+			display: inline-block;	
+		}
+		
+		#VacancyView_sidebar {
+			margin-top: 15px;
+/* 			padding-right: 80px; */
+			margin-right: 80px;
+			float:right;
+			width: 250px;
+
+		}
+		.VacancySendResumeButton{
+			border: 1px dashed #d9d9d9;
+			border-radius: 5px;
+			padding: 11px 13px;
+			position: relative;
+			text-align: center;	
+		}
+		#VacancyView_main {
+			padding-top: 15px;
+			padding-right: 350px; 
+			padding-left: 80px;
+/* 			margin-top: -400px; */
+		}
+		.VacancyDetails_title {
+			font-size: 13px;
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+		.VacancyDetails_item {
+			margin: 0 0 7px;
+		}
+		.VacancyView_salary {
+			margin-bottom: 24px;
+		}		
+		.vacansy_name{
+		    color: #08C;
+			font-weight: bold;
+			margin-bottom: 6px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.vacansy_exp{
+			border-bottom-color: #919191;
+			color: #919191;
+		}
+		
+		.vacansy_name{
+		    color: #08C;
+			font-weight: bold;
+			margin-bottom: 6px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		
+		.vacansy_block {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+		
+		.vacansy_box {
+		    padding-right: 20px;
+			width: 30%;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 20px;
+		}
+		
+		.vacansy_box_red {
+			border: 1px double red;
+		}
+		.vacansy_box_black {
+			border: 1px double black;
+		}
+		
+		.vacansy_name{
+		    color: #08C;
+			font-weight: bold;
+			margin-bottom: 6px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		
+		.vacansy_exp{
+			border-bottom-color: #919191;
+			color: #919191;
+		}
+		.vacansy_salary {
+		border-bottom-color: #093;
+		color: #093;
+		font-weight: bold;
+		}
+		
+		.vacansy_hyperlink {
+			border-bottom-color: #007EFC;
+			color: #007EFC;
+			text-decoration: underline;
+			cursor: auto;
+		}
+		.sj_btn, .sj_btn:visited, .sj_btn:hover, .sj_btn:focus {
+		border: 0;
+		display: inline-block;
+		outline: 0;
+		text-decoration: none;
+		border-radius: 3px;
+		text-align: center;
+		cursor: pointer;
+		transition: all .2s;
+		font-size: 14px;
+		height: 33px;
+		line-height: 31px;
+		padding: 0 10px;
+}
+		.m_green.sj_btn {
+			background: #22c431;
+			border: 1px solid #22c431;
+			color: #fff;
+		}
+		.m_green.sj_btn:hover {
+			background: #50cc5c;
+			border-color: #50cc5c;
+			color: #fff;
+		}
+		
+		.VacancySendResumeButton_btn {
+			position: relative;
+		}
+		
+		.data_post_for_visitors {
+			border-bottom-color: #919191;
+			color: #919191;
+		}
