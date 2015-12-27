@@ -1,0 +1,75 @@
+.form {
+	margin-left: 80px;
+	margin-top: 10px;
+}
+
+.form label {
+	width: 180px; /*ширина*/
+	float: left; /*выравняли*/
+	color: #999;
+	padding-top: 5px;
+}
+
+.form p{
+	margin-bottom: 20px;
+}
+
+.form input {
+	width: 400px;
+}
+
+.form textarea {
+	width: 400px;
+	max-width: 400px;
+	min-width: 400px; /*чтобы не изменялась по ширине*/
+	line-height: 150%; /*межстрочный интервал*/
+}
+.form select {
+	width: 400px;
+}
+
+.confirm {
+	float: none !important; /*свойство в приоритете*/
+}
+
+.form input[type="checkbox"]{
+	width: auto;
+}
+
+.form input, .form textarea, .form select{
+	padding: 9px; /*Внешний вид полей ввода и т.п. - внутренний отступ*/
+	border: 1px solid #E5E5E5; /*Внешний вид полей ввода и т.п. - рамка*/
+	border-radius: 5px;/*Внешний вид полей ввода и т.п.*/
+	/*тени*/
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	background: #FFF url('bg.jpg') left top repeat-x; 
+	/*закрасили в белый цвет, воткнули рисунок, расположили по перху с лева и повторили по оси икс*/
+}
+.form input:hover, .form textarea:hover, .form select:hover,
+.form input:focus, .form textarea:focus, .form select:focus{
+	border-color: #C9C9C9;
+	/*тени*/
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /*30% насыщеность*/
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.form .submit input {
+	width: auto;
+	background: #32b2d6;
+	color: #FFF;
+	padding: 9px 15px;
+	border: 0px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.form .submit input:hover {
+	background: #2B415E;
+}
+
+.formTextRed {
+	color: red;
+}

@@ -1,0 +1,5 @@
+<?
+class main extends ACore {
+
+}
+?>
