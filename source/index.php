@@ -1,28 +1,26 @@
-<?
+<?php
 header ("Content-Type: text/html;charset=UTF-8");
+ 
+require_once "config.php" ;
+require_once "classes/ACore.class"; 
 
-require_once(config.php);
-require_once(classes/ACore.php);
-
-if ($_GET['option']) {
+ if (isset($_GET['option'])) {
 	$class = trim(strip_tags($_GET['option']));
-}
-else {
+	} else {
 	$class = 'main';
 }
-
-if(file_exist("classes/".$class.".php")) {
+if(file_exists("classes/".$class.".class")) {
 	
-	include("classes/".$class.".php");
-	if(class_exist($class)) {
+	include("classes/".$class.".class");
+	if(class_exists($class)) {
+		
 		$obj = new $class;
 		$obj -> get_body();
-	}
-	else {
+		
+	} else {
 		exit("Нет данных для входа");
 	}
-}
-else {
+} else {
 	exit("Не правильный адрес");
-}
+} 
 ?>

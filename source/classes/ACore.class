@@ -1,0 +1,95 @@
+<?php
+abstract class ACore {
+	
+	private function get_header() {
+		echo <<<LABEL
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="css/slide.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>ООО Истрия. Мы управляем бизнесом!</title>
+	<meta name="description" content="Компания ИСТРИЯ предлагает молодым амбициозным людям раскрыть в себе таланты лидера и управленца. Смотри вакансии, пиши, звони!"/>
+	</head>
+	<body>
+	<div id="wrapper">
+	<header>
+	<div id="top_line"></div> <!--top_line-->
+		<div id="logo">
+			<a name="top"></a><a href="/"><img src="img/logo.jpg" alt="logo" /></a>
+		</div><!--logo-->	
+LABEL;
+	}
+	
+	public function get_blueLine() {
+		
+	}
+	
+	private function get_nav() {
+		echo <<<LABEL
+		<nav>
+		<ul>	
+LABEL;
+	$stmt = $connection->prepare('SELECT * FROM menu');
+	$stmt->execute();
+	while($menu = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+		echo '<li><a href="?option='.$menu["path"].'">'.$menu["title"].'</a>';
+}
+		echo <<<LABEL
+			</ul>
+		</nav><!--nav-->	
+		</header><!--header-->	
+LABEL;
+	}
+	
+	public function get_slider() {	
+	}
+
+	private function get_block() {
+	echo '<div id="content">
+		<div class="block">	';
+	}
+
+	public function get_content() {		
+	}
+	
+	private function get_footer() {
+	echo <<<LABEL
+	<div id="up">
+		<a href="#top"><img src="img/up.png" alt="UP!"/></a>
+	</div><!--up -->	
+LABEL;
+	}
+	
+	private function get_footer_nav() {
+	echo <<<LABEL
+			<div id="footer_navigation">
+					<ul>	
+LABEL;
+
+//	echo '<li><a href="?option='echo row["path"]'">'echo row["title"]'</a></li>'
+	
+	echo <<<LABEL
+					</ul>
+			</div><!--footer_navigation-->
+		</footer> <!--footer -->
+	</div><!--end wrapper-->
+</body>
+</html>	
+LABEL;
+	}
+	public function get_body() {
+	$this->get_header();
+	$this->get_nav();
+	$this->get_slider ();
+	$this->get_block();
+	$this->get_content();
+	$this->get_footer();
+	$this->get_footer_nav(); 
+	}
+	
+}
+?>

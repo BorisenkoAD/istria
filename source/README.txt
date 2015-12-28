@@ -1,6 +1,10 @@
 перевод сайта на ООП - попытка 2
 
 www.istria-spb.ru/index.php?option=main
+www.istria-spb.ru/index.php?option=contact
+www.istria-spb.ru/index.php?option=our_project
+www.istria-spb.ru/index.php?option=our_team
+www.istria-spb.ru/index.php?option=vacancy
 
 точка входа index.php
 создается main.class
