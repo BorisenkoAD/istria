@@ -1,5 +1,13 @@
 <?php
 abstract class ACore {
+	protected $db;
+	
+	public function __construct (){
+		$this->db = new PDO('mysql:host=192.168.137.105; dbname=db1063074_vacansy', 'u1063074_admin', 'TiEtIFnW1MwY)2)X', array(
+		PDO::ATTR_PERSISTENT => true));
+		$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$this->db->query("SET NAMES 'utf8'");
+	}
 	
 	private function get_header() {
 		echo <<<LABEL
@@ -23,7 +31,7 @@ abstract class ACore {
 LABEL;
 	}
 	
-	public function get_blueLine() {
+	 protected function get_blueLine() {
 		
 	}
 	
@@ -32,7 +40,8 @@ LABEL;
 		<nav>
 		<ul>	
 LABEL;
-	$stmt = $connection->prepare('SELECT * FROM menu');
+
+	$stmt = $this->db->prepare('SELECT * FROM menu WHERE parent_id=0');
 	$stmt->execute();
 	while($menu = $stmt->fetch(PDO::FETCH_ASSOC))
 {
@@ -45,15 +54,15 @@ LABEL;
 LABEL;
 	}
 	
-	public function get_slider() {	
+	 protected function get_slider() {	
 	}
 
 	private function get_block() {
 	echo '<div id="content">
-		<div class="block">	';
+		<div id="company">	';
 	}
 
-	public function get_content() {		
+	 protected function get_content() {		
 	}
 	
 	private function get_footer() {
@@ -69,8 +78,12 @@ LABEL;
 			<div id="footer_navigation">
 					<ul>	
 LABEL;
-
-//	echo '<li><a href="?option='echo row["path"]'">'echo row["title"]'</a></li>'
+	$stmt = $this->db->prepare('SELECT * FROM menu WHERE parent_id=0');
+	$stmt->execute();
+	while($menu = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+		echo '<li><a href="?option='.$menu["path"].'">'.$menu["title"].'</a>';
+}
 	
 	echo <<<LABEL
 					</ul>

@@ -1,8 +1,8 @@
 <?php
 header ("Content-Type: text/html;charset=UTF-8");
  
-require_once "config.php" ;
-require_once "classes/ACore.class"; 
+include_once ("config.php") ;
+include_once ("classes/ACore.class"); 
 
  if (isset($_GET['option'])) {
 	$class = trim(strip_tags($_GET['option']));
