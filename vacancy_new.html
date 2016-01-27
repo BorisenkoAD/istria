@@ -134,6 +134,7 @@ include "dbLib.php";
 				
 				<div class="vacansy_block">
 					 <?php	
+						$row = array();
 						$stmt = $connection->query('SELECT * FROM vacansy 
 													JOIN s_exp ON (vacansy.id_exp = s_exp.id)
 													WHERE status LIKE "1"');
