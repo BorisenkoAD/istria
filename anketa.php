@@ -1,4 +1,6 @@
 <?php 	
+		date_default_timezone_set('Europe/Moscow');
+
 		$position =  substr(htmlspecialchars(trim($_POST['position'])), 0, 1000); 
         $schedule =  substr(htmlspecialchars(trim($_POST['schedule'])), 0, 1000); 
         $date_get_start =  substr(htmlspecialchars(trim($_POST['date_get_start'])), 0, 30); 

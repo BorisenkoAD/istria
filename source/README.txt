@@ -1,3 +1,7 @@
+28_01_16 перевод сайта на ООП - попытка 3 переход на паттерн MVC
+
+
+
 перевод сайта на ООП - попытка 2
 
 www.istria-spb.ru/index.php?option=main
@@ -27,4 +31,4 @@ get_footer_nav()
 					тег title/decsription
 				get_content_n()
 					картинки/текст
-				
+
