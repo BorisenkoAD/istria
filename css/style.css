@@ -731,3 +731,13 @@ nav li:hover, nav li.jshover {
 			border-bottom-color: #919191;
 			color: #919191;
 		}
+/* <!-- SJ LABEL START -->	 */	
+.sj_label {
+	padding-left: 50px;
+	float: left;
+	width: 350px;
+	margin-left: 80px;
+	margin-top: 15px;
+
+}
+/* <!-- SJ LABEL END -->	 */	
