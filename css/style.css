@@ -327,11 +327,14 @@ nav li:hover, nav li.jshover {
 
 #project p a {
 	font-family: Verdana, Helvetica, sans-serif;
-	color: ##515151;
+	color: #32b2d6;
 	font-size: 13px;
 	text-decoration: none;
 	outline: none;
 }
+#project p a:hover { 
+    text-decoration: underline;
+   }
 
 #project .twoParagraf{
 	margin-left: 80px; /*отступаем от картинки и + 10 от ее края. А картинки то все разные(*/
