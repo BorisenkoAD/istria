@@ -64,8 +64,7 @@ body {
 	background-position: center top;
 	background-attachment: fixed;
 	
-}
-
+}	
 
 a {
 	text-decoration: none;
@@ -188,8 +187,7 @@ nav li a {
 	color: #FFF;
 	width: 150px;
 	height: 33px;
-	text-decoration: none;
-	
+	text-decoration: none;	
 	}
 nav li:hover ul, nav li.jshover ul {
 	display: block;
@@ -325,6 +323,14 @@ nav li:hover, nav li.jshover {
 	text-align: justify;
 	line-height: 1.5;
 	text-indent: 25px; /* Отступ первой строки в пикселах */	
+}
+
+#project p a {
+	font-family: Verdana, Helvetica, sans-serif;
+	color: ##515151;
+	font-size: 13px;
+	text-decoration: none;
+	outline: none;
 }
 
 #project .twoParagraf{
