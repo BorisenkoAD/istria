@@ -1,23 +1,8 @@
 <?php
-/* is_uploaded_file($_FILES['userfile']['tmp_name']) {*/
+
 	$uploaddir = '/var/www/vhosts/22/137870/webspace/httpdocs/istria-spb.ru/istria2/tmp/';
 	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
-/*	echo '<pre>';
-	if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-		echo "Файл корректен и был успешно загружен.\n";
-	} else {
-		echo "Возможная атака с помощью файловой загрузки!\n";
-	}
-}  else {
-   echo "Возможная атака с участием загрузки файла: ";
-   echo "файл '". $_FILES['userfile']['tmp_name'] . "'.";
-}
-?>
-<?php
-
-header('Content-Type: text/plain; charset=utf-8');
- */
 try {
     
     // Undefined | Multiple Files | $_FILES Corruption Attack
