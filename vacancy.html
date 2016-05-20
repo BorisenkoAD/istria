@@ -22,6 +22,44 @@
     <![endif]-->
   </head>
   <body>
+<!-- HTML-код модального окна -->
+<div id="myModalBox" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Заголовок модального окна -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Отправка резюме</h4>
+      </div>
+      <!-- Основное содержимое модального окна -->
+      <div class="modal-body">
+        <!-- основное содержимое (тело) модального окна -->
+        <div class="container-fluid">
+          <!-- Контейнер, в котором можно создавать классы системы сеток -->
+	  		<form enctype="multipart/form-data" action="mail.php" method="POST">
+			<div class="form-group">
+				<label for="userfile">Не более 2Мb, MS Word 2000 - 2010, jpg</label>									
+				<input type="hidden" name="MAX_FILE_SIZE" value="1900000" />
+				<input name="userfile" type="file" />		
+			</div>		  
+          <div class="row">
+			<div class="form-group">
+				<label for="message" class="col-xs-4 control-label">Дополнительно:</label>
+				<div class="col-xs-8">						
+					<textarea maxlength="350" class="form-control form__textarea" required placeholder="Дополнительная информация, не более 350 знаков"  name="message" id="message" rows="3"></textarea>
+				</div>
+			</div>
+          </div>
+        </div>
+	</div>	  
+      <!-- Футер модального окна -->
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-success">Отправить <i class="fa fa-paper-plane" aria-hidden="true"></i>
+		</form>			
+      </div>
+    </div>
+  </div>
+</div>	
 <div class="container wrapper">
 	<nav class="navbar navbar-default" role="navigation">
 	  <!-- <div class="container"> -->
@@ -180,7 +218,7 @@
 					<div class="col-sm-1"></div>
 				</div>				
 			</div>
-		</div>
+		</div>	
 		<div class="mail_block__princip marg_25">	
 			<div class="container">
 				<div class="row">	
@@ -216,52 +254,44 @@
 								<a href="#spoiler-1" data-toggle="collapse" class="btn btn-primary spoiler center-block" collapsed>Менеджер строительных проектов</a>
 								<div class="collapse" id="spoiler-1">
 									<div class="well">
-								<h4>Опыт работы от 1 года,<br>заработная плата 35 000 – 50 000 руб.</h4>
-								<h5>Обязанности:</h5>
-								<ul>
-									<li>Обеспечение взаимодействия с проектными и управляющими компаниями;</li>
-									<li>Контроль составления технических заданий и сметных расчетов стоимости;</li>
-									<li>Контроль заключаемых договоров;</p>
-									<li>Контроль своевременного заключения договоров подряда и дополнительных соглашений;</li>
-									<li>Координация совместной работы подрядных организаций;</li>
-									<li>Контроль производства СМР и их соответствие утвержденной проектно-сметной документации;</li>
-									<li>Контроль соответствия выполненных работ сметной документации и графику производства работ;</li>
-								</ul>
-									<h5>Требования:</h5>
-								<ul>
-									<li>Образование: высшее (предпочтение отдается кандидатам с инженерно-строительным образованием); </li>
-									<li>Опыт работы от 1 года;</li>
-									<li>Аналитический склад ума;</li>
-									<li>Лидерские качества;</li>
-									<li>Нацеленность на результат;</li>
-									<li>Готовность много работать с документами;</li>
-									<li>Умение вести несколько проектов одновременно;</li>
-									<li>Готовность к обучению, желание развиваться, активность;</li>
-									<li>Внимательность и пунктуальность;</li>
-									<li>Высокий уровень коммуникативных навыков;</li>
-								</ul>
-									<h5>Условия:</h5>
-								<ul>
-									<li>График: 5/2, с 9-30 до 17-30 (возможно совмещение с учебой);</li>
-									<li>Испытательный срок 1 месяц;</li>
-									<li>Оформление по ТК РФ;</li>
-									<li>Размер заработной платы определяется по результатам собеседования;</li>
-									<li>Быстрый карьерный рост;</li>
-									<li>Обучение в процессе работы;</li>
-									<li>Льготное питание;</li>
-									<li>Дружный коллектив;</li>
-									<li>В ряде случаев возможно бесплатное предоставление жилья;</li>
-									<li>Офис расположен в 10 мин. езды от ст.м. Ладожская.</li>
-								</ul>
-								<form method="post" enctype="multipart/form-data" action="mail.php">
-									<div class="form-group">
-										<label for="exampleInputFile">File input</label>
-										<input type="file" id="exampleInputFile">
-										<p class="help-block">Прикрепите свое резюме</p>
-										
-									</div>	
-									<button type="submit" class="btn btn-success">Отправить <i class="fa fa-paper-plane" aria-hidden="true"></i>
-								</form>
+										<h4>Опыт работы от 1 года,<br>заработная плата 35 000 – 50 000 руб.</h4>
+										<h5>Обязанности:</h5>
+										<ul>
+											<li>Обеспечение взаимодействия с проектными и управляющими компаниями;</li>
+											<li>Контроль составления технических заданий и сметных расчетов стоимости;</li>
+											<li>Контроль заключаемых договоров;</p>
+											<li>Контроль своевременного заключения договоров подряда и дополнительных соглашений;</li>
+											<li>Координация совместной работы подрядных организаций;</li>
+											<li>Контроль производства СМР и их соответствие утвержденной проектно-сметной документации;</li>
+											<li>Контроль соответствия выполненных работ сметной документации и графику производства работ;</li>
+										</ul>
+											<h5>Требования:</h5>
+										<ul>
+											<li>Образование: высшее (предпочтение отдается кандидатам с инженерно-строительным образованием); </li>
+											<li>Опыт работы от 1 года;</li>
+											<li>Аналитический склад ума;</li>
+											<li>Лидерские качества;</li>
+											<li>Нацеленность на результат;</li>
+											<li>Готовность много работать с документами;</li>
+											<li>Умение вести несколько проектов одновременно;</li>
+											<li>Готовность к обучению, желание развиваться, активность;</li>
+											<li>Внимательность и пунктуальность;</li>
+											<li>Высокий уровень коммуникативных навыков;</li>
+										</ul>
+											<h5>Условия:</h5>
+										<ul>
+											<li>График: 5/2, с 9-30 до 17-30 (возможно совмещение с учебой);</li>
+											<li>Испытательный срок 1 месяц;</li>
+											<li>Оформление по ТК РФ;</li>
+											<li>Размер заработной платы определяется по результатам собеседования;</li>
+											<li>Быстрый карьерный рост;</li>
+											<li>Обучение в процессе работы;</li>
+											<li>Льготное питание;</li>
+											<li>Дружный коллектив;</li>
+											<li>В ряде случаев возможно бесплатное предоставление жилья;</li>
+											<li>Офис расположен в 10 мин. езды от ст.м. Ладожская.</li>
+										</ul>
+											<a href="#" class="btn btn2 btn-primary">Отправить резюме</a>					
 									</div>						
 								</div>
 							</div>
@@ -1196,7 +1226,7 @@
 										<div class="form-group">
 											<label for="schedule" class="col-xs-4 control-label"><span class="form__required">*</span> Пожелания по графику:</label>
 											<div class="col-xs-8">
-												<input type="text" class="form-control form__input" name="schedule" id="schedule" required placeholder="Пятидневка"/>												
+												<input type="text" class="form-control form__input" name="schedule" id="schedule" required placeholder="Пятидневка"/>											
 											</div>
 										</div>
 									</div>							
@@ -1528,5 +1558,19 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/salvattore.min.js"></script>
+<!-- Скрипт, привязывающий событие click, открывающее модальное окно, к элементам, имеющим класс .btn -->
+<script>
+$(document).ready(function(){
+  //при нажатию на любую кнопку, имеющую класс .btn
+  $(".btn2").click(function() {
+    //открыть модальное окно с id="myModalBox"
+    $("#myModalBox").modal('show');
+  });
+//отобразить сообщение, когда модальное окно будет полностью скрыто от пользователя
+  $("#myModalBox").on('hidden.bs.modal', function(){
+    alert("Ваше резюме отправлено.");
+  });
+});
+</script>
   </body>
 </html>
