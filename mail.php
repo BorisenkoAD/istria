@@ -1,7 +1,8 @@
 <?php
 
-	$uploaddir = '/var/www/vhosts/22/137870/webspace/httpdocs/istria-spb.ru/istria2/tmp/';
+	$uploaddir = '/var/www/vhosts/22/137870/webspace/httpdocs/dev.istria-spb.ru/tmp/';
 	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+	$mes = " ";
 
 try {
     
@@ -11,7 +12,7 @@ try {
         !isset($_FILES['userfile']['error']) ||
         is_array($_FILES['userfile']['error'])
     ) {
-        throw new RuntimeException('Invalid parameters.');
+        throw new RuntimeException('Неверные параметры. повторите операцию.');
     }
 
     // Check $_FILES['upfile']['error'] value.
@@ -19,17 +20,17 @@ try {
         case UPLOAD_ERR_OK:
             break;
         case UPLOAD_ERR_NO_FILE:
-            throw new RuntimeException('No file sent.');
+            throw new RuntimeException('Файл не отправлен.');
         case UPLOAD_ERR_INI_SIZE:
         case UPLOAD_ERR_FORM_SIZE:
-            throw new RuntimeException('Exceeded filesize limit.');
+            throw new RuntimeException('Превышен размер файла.');
         default:
-            throw new RuntimeException('Unknown errors.');
+            throw new RuntimeException('Неизвестная ошибка.');
     }
 
     // You should also check filesize here. 
     if ($_FILES['userfile']['size'] > 1900000) {
-        throw new RuntimeException('Exceeded filesize limit.');
+        throw new RuntimeException('Превышен размер файла.');
     }
 
     // DO NOT TRUST $_FILES['userfile']['mime'] VALUE !!
@@ -47,7 +48,7 @@ try {
         ),
         true
     )) {
-        throw new RuntimeException('Invalid file format.');
+        throw new RuntimeException('Неверный формат.');	
     }
 
     // You should name it uniquely.
@@ -57,10 +58,9 @@ try {
         $_FILES['userfile']['tmp_name'],$uploadfile
   /*      sprintf('/var/www/vhosts/22/137870/webspace/httpdocs/istria-spb.ru/istria2/tmp/%s.%s', sha1_file($_FILES['userfile']['tmp_name']), $ext)*/
     )) {
-        throw new RuntimeException('Failed to move uploaded file.');
+        throw new RuntimeException('Перемещение файла невозможно.');
     }
-
-    echo 'File is uploaded successfully.';
+        throw new RuntimeException('Ваше сообщение успешно отправлено.');
 	//---------------------------------
 $filename = $uploadfile;  // $_FILES['userfile']['name']; //Имя файла для прикрепления
 $to = "paz001@yandex.ru";
@@ -97,11 +97,37 @@ mail($to, $subj, $msg, $headers);
 	// теперь этот файл нужно переименовать желательно в дату_время отправки
 	// потом его отправить по почте админу 
 	// и удалить его.
+ } catch (RuntimeException $e) {
 
-} catch (RuntimeException $e) {
-
-    echo $e->getMessage();
-
-}
 
 ?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Макет загружен</title>
+	<link href="css/normalize.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'/>	
+    <link href="css/style.css" rel="stylesheet"/>	
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">			
+					<h2 class="text-center"><strong><?echo $e->getMessage();}?></strong></h2>
+                </div>
+            </div>
+        </div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            setTimeout('location.replace("/vacancy.html")', 3000);
+        </script>
+
+    </body>
+</html>
