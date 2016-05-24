@@ -97,7 +97,7 @@ h5{
 	font-weight: 700;
 }
 .item{
-    background: #333;    
+    background: #333; /*333*/   
     text-align: center;
     height: 300px !important;
 }
