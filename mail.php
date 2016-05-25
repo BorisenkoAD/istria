@@ -106,7 +106,7 @@ mail($to, $subj, $msg, $headers);
 
     <head>
         <meta charset="UTF-8">
-        <title>Макет загружен</title>
+        <title></title>
 	<link href="css/normalize.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
 	<link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'/>	
