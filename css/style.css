@@ -26,13 +26,6 @@
 		content: '2 .col-xs-6';
 	}
 }
-/* body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: #fff;
-} */
 .wrapper {
 	background: #FFFFFF;
 /* 	width: 75%; */
@@ -114,6 +107,7 @@ h5{
 ---------------------------------------------------*/
 .main__text-header {
 	color: #fff;
+	padding-top: 3px;
 }
 /* main_block__princip
 -------------------------------------------------- */
