@@ -67,17 +67,17 @@ body {
 }	
 .blue_line {
 	background-color: #32b2d6;
-	border-top: 5px solid #5a5a5a; 
+	/* border-top: 5px solid #5a5a5a;  */
 	background-image: url(../img/logo_button_bg_left.png);	
-	height: 31px;
+	height: 24px;
 }
 /* голубая и серая черта в подзаголовке в логотипе
 ---------------------------------------------------*/
 .img_border {
 	background-color: #32b2d6;
-	border-top: 5px solid #5a5a5a; 
+	/* border-top: 5px solid #5a5a5a;  */
 	background-image: url(../img/logo_button_bg_left.png);
-	height: 31px;
+	height: 24px;
 }
 /* carusel start
 -------------------------------------------------- */
@@ -102,7 +102,7 @@ h5{
 /* main_block__about
 -------------------------------------------------- */
 .main_block{
-		    padding-top: 20px;
+    padding-top: 20px;
 }
 
 /* сам заголовок
