@@ -1,9 +1,10 @@
 /* цвет фона и рамки навигационного меню */
 .navbar-default {
     background-color: #32b2d6;
+	background-image: url(../img/logo_bg.png);
  /*   border-color: #32b2d1;*/
 	border-top: 5px solid #5a5a5a;
-	height: 45px;
+	height: 55px;
 }
 /* цвет текста, содержащий название сайта или бренда */
 .navbar-default .navbar-brand {
@@ -23,7 +24,7 @@
 }
 /* Цвет пунктов навигационного меню */
 .navbar-default .navbar-nav > li > a {
-    color: #fff;
+    color: #000;
 	font-weight: bold;
 }
 /* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
@@ -31,7 +32,7 @@
 .navbar-default .navbar-nav > li > a:focus {
     color: #fff;/*fff*/
 	background-color: #515151;
-	height: 44px;
+	height: 49px;
 }
 /* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-nav > .active > a, 
