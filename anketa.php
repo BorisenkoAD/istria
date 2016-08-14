@@ -24,7 +24,7 @@ $speciality= substr(htmlspecialchars(trim($_POST['speciality'])), 0, 400);
 $diplom= substr(htmlspecialchars(trim($_POST['diplom'])), 0, 50);
 $Grad_year= substr(htmlspecialchars(trim($_POST['Grad_year'])), 0, 50);
 
-$mess = "$position\n$Name $LastName $DLastName\n$Email $Tel\n$schedule $date_get_start $salary_desired\n$citizenship $place_liv $birthday\n$Company_name $post $start_job - $end_job\n$responsibilities\n$skills\n$Institute\n$speciality $diplom\n$Grad_year";
+$mess = "Должность: $position\nИмя: $Name Фамилия: $LastName Отчество: $DLastName\nдля связи: $Email $Tel\nЖелаемый график: $schedule Дата начала: $date_get_start ЗП: $salary_desired\n$Гражданство: citizenship Место жительства: $place_liv День рождения: $birthday\n$Прошлая работа:\nОрганизация: Company_name Должность: $post $start_job - $end_job\nОбязанности: $responsibilities\nНавыки: $skills\nУчебное заведение:\n$Institute\n$speciality $diplom\n$Grad_year";
 // $mess = "$lastname $firstname\n$email\n$tel\n $textarea";
 $subj = "Форма обратной связи с сайта";
 $to = "paz001@yandex.ru"; //заменить на почту лосты
