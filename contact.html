@@ -110,7 +110,7 @@
 					<a href="/"><img src="img/logobig.png" alt="logo"  class="img-responsive center-block"/></a>
 					</div>
 					<div class="col-sm-7">
-						<p><strong>ООО "Лоста"</strong></p>
+						<p><strong>ЗАО "Лоста"</strong></p>
 						<p>Санкт-Петербург, м. Ладожская, Проспект Косыгина, 21 лит. А</p>
 						<p>Телефон: +7 (812) 577-24-99</p>
 						<p>E-mail: <a href="mailto:info@lostaspb.ru"><span style="unicode-bidi:bidi-override; direction: rtl;">ur.bps-airtsi@ofni</span></a></p>
@@ -288,5 +288,12 @@ $().UItoTop({ easingType: 'easeOutQuart' });
  
 });
 </script> 
-  </body>
+<script type="text/javascript">	
+			jQuery('ul.nav > li').hover(function() {
+			jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+		}, function() {
+			jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+		})
+</script>
+</body>
 </html>
