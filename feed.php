@@ -9,7 +9,7 @@ $tel = substr(htmlspecialchars(trim($_POST['Tel'])), 0, 30);
 $textarea = substr(htmlspecialchars(trim($_POST['Text'])), 0, 400);
 $mess = "$lastname $firstname\n$email\n$tel\n $textarea";
 $subj = "Форма обратной связи с сайта";
-$to = "paz001@yandex.ru";
+$to = "paz001@yandex.ru"; //заменить на почту лосты
 $from="admin@istria-spb.ru";
 $headers = "From: $from\nReply-To: $from\n";
 if (!mail($to, $subj, $mess, $headers)){

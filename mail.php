@@ -1,6 +1,6 @@
 <?php
 
-	$uploaddir = '/var/www/vhosts/22/137870/webspace/httpdocs/dev.istria-spb.ru/tmp/';
+	$uploaddir = '/var/www/vhosts/22/137870/webspace/httpdocs/lostaspb.ru/tmp/';
 	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 	$mes = " ";
 
