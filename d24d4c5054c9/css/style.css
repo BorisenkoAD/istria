@@ -1,0 +1,184 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	.masonry[data-columns]::before {
+		content: '1 .col-xs-12';
+	}
+	.lead {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.masonry[data-columns]::before {
+		content: '1 .col-xs-12';
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.masonry[data-columns]::before {
+		content: '2 .col-xs-6';
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.masonry[data-columns]::before {
+		content: '2 .col-xs-6';
+	}
+}
+.wrapper {
+	background: #FFFFFF;
+/* 	width: 75%; */
+	margin: 0 auto;
+				margin-top: 20px;
+				border: 1px solid #E8E8E8;
+			padding: 1em;
+			  box-shadow:
+			   0 1px 4px rgba(0, 0, 0, .3),
+			   -23px 0 20px -23px rgba(0, 0, 0, .8),
+			   23px 0 20px -23px rgba(0, 0, 0, .8),
+			   0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.marg_25{margin-top: 25px;}
+.form__required {color: red;}
+/* изменение разделителя в поле хлебные крошки
+---------------------------------------------------*/
+.breadcrumb>li+li:before{content: "\f105"; font-family: FontAwesome}
+
+/* добавление анимации при просмотре вакансии - спойлер
+---------------------------------------------------*/
+ a.spoiler.collapsed:after{
+	content: " [+]";
+}
+a.spoiler:after{
+	content: " [-]";
+} 
+body {	
+	font-family: 'Roboto', sans-serif;
+	color: ##515151;
+    font-size: 14px;
+    line-height: 1.42857143;
+ 	background-image: url(../img/bg.jpg); 
+
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;	
+}	
+.blue_line {
+	background-color: #32b2d6;
+	/* border-top: 5px solid #5a5a5a;  */
+	background-image: url(../img/logo_button_bg_left.png);	
+	height: 24px;
+}
+/* голубая и серая черта в подзаголовке в логотипе
+---------------------------------------------------*/
+.img_border {
+	background-color: #32b2d6;
+	/* border-top: 5px solid #5a5a5a;  */
+	background-image: url(../img/logo_button_bg_left.png);
+	height: 24px;
+}
+/* carusel start
+-------------------------------------------------- */
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+h5{
+	font-weight: 700;
+}
+.item{
+    background: #333; /*333*/   
+    text-align: center;
+    height: 300px !important;
+}
+.carousel{
+    margin-top: 20px;
+}
+/* main_block__about
+-------------------------------------------------- */
+.main_block{
+    padding-top: 20px;
+}
+
+/* сам заголовок
+---------------------------------------------------*/
+.main__text-header {
+	color: #000;
+	padding-top: 3px;
+	font-weight:bold;
+}
+/* main_block__princip
+-------------------------------------------------- */
+
+/* main_block__partners
+-------------------------------------------------- */
+
+/* footer
+-------------------------------------------------- */
+footer {
+	background-color: #eee;
+}
+/* footer a{
+	font-size: 12px;
+	color: #fff;
+	padding-top: 5px;
+} */
+footer img {
+    padding-top: 10px;
+}
+/* header
+-------------------------------------------------- */
+header{
+	height: 50px;
+}
+/* FORM
+-------------------------------------------------- */
+ .form {
+	background-color: #fff;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+.form_text {
+	font-size: 35px;
+}
+.form__select{
+	border: 1px solid #eee;
+	background-color: transparent;
+	/*color: #18ceec;*/
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	width: 100%;
+	padding-left: 10px;	
+}
+.form__input {
+	border: 1px solid #eee;
+	background-color: transparent;
+	/*color: #18ceec;*/
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	width: 100%;
+	padding-left: 10px;
+}
+.form__textarea {
+	border: 1px solid #eee;
+	background-color: transparent;
+	/*color: #18ceec;*/
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	width: 100%;
+	padding-left: 10px;
+}
+.form__required {
+	color: red;
+} 
